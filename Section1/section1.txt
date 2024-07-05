@@ -1,0 +1,77 @@
+AULA 1
+
+GraphQL -> Linguagem de consulta de API
+leva para o frontend a responsabilidade do que deve ser trazido para o frontend
+
+https://graphql.org/
+
+Utiliza estrutura de grafo
+
+Aula 2
+
+REST vs GraphQL
+
+REST:
+- trabalha com diferentes rotas e métodos
+
+GraphQL:
+- única url
+  - utilizando no body a sintaxe do graphql
+  - Pode mantes diferentes bancos com apenas uma url
+  - diminui a implementação backend
+
+
+Aula 3
+
+Como os dados são organizados?
+
+Banco de dados relacional
+- chave/valor (relacionamento)
+- diferentes relacionamentos em formato de tabela
+
+Banco de dados não relacional (MongoDB)
+- Documentos JSON (dentro de Coleções)
+
+em graphql --> Em um nó pode chegar em diferentes nós, podendo chegar em nos de pontos diferentes
+A consulta pode ser feita em diferentes nós
+por exemplo:
+
+nó_mae -> nó_filho
+
+mãe {
+  id
+  nome
+  idade
+  filhos {
+    nome
+    idade
+  }
+}
+
+resolver (conseito q resolve esses relacionamentos e processamento das querys)
+
+Aula 5
+
+curso:
+VScode
+Node
+
+Aula 6
+https://github.com/cod3rcursos/curso-graphql
+
+Aula 7
+Terminal
+Fala galera! Tranquilo?
+
+Venho passar uma dica rápida e super importante pra quem tá iniciando na área de programação agora. Essa dica serve para qualquer ambiente ou curso que você vá fazer.
+
+
+O terminal do seu sistema operacional, seja ele Windows, Linux ou Mac, é super importante. É uma ferramenta importante de ser dominada e que será utilizada em qualquer ambiente de qualquer linguagem ou tecnologia. Vou deixar aqui links para os posts feitos lá no Blog da Cod3r sobre esse assunto.
+
+Caso vocês não saibam muito sobre os terminais ou se tiverem dúvidas sobre o assunto, recomendo que deem uma olhada.
+
+Windows -> https://blog.cod3r.com.br/terminal-no-windows/
+
+Linux/Mac -> https://blog.cod3r.com.br/terminal-no-macos-e-linux/
+
+Bons estudos, galera!
