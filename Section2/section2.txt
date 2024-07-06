@@ -1,0 +1,65 @@
+Schama
+
+o typeDefs é o local onde é referenciado os tipos e retornos disponíveis na query
+(Ponto de entrada 'type')
+ex:
+
+type Query {
+  ola: String!
+  tchau: String
+}
+
+! -> Diz se o tipo é Obrigatório
+(
+  Caso não seja obrigatório e não possua um resolver para o valor retorna null
+  Caso seja obrigatório e não possua resolver retorna um erro
+)
+
+
+Tipos básicos (Scalar Types)
+ * scalar são os tipos básicos e primários do GraphQL
+
+- Int
+- Float
+- String
+- Boolean
+- ID (é serializado com uma string)
+
+Criando tipos scalar
+ex:
+scalar Date -> Criando o tipo Date para usar no schema
+
+Tipo
+ex:
+type Usuario {
+		id: ID!
+		nome: String!
+		email: String!
+		Idade: Int
+		salario: Float
+		vip: Boolean
+	}
+esse tipo pode ser a resposta de outro query
+
+
+criando resolver
+resolvers podem ser criados de tipos tb para ajustar valores
+todo resolver retorn os parents, ou seja, o valor do parent a cima dele esta retornando
+
+** exercício produto
+
+Retornando Arrays
+
+fragment usuarioCompleto on Usuario {
+  id nome email idade salario vip
+  perfil {
+    nome
+  }
+}
+
+
+Links Úteis
+
+https://graphql.github.io/learn/schema/
+
+https://graphql.github.io/learn/queries/
