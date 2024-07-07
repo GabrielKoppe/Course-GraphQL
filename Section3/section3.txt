@@ -1,0 +1,79 @@
+Mutação (Modificando data)
+
+CRUD
+
+Mutações servem para alterar algo no db
+x
+Querys servem para acessar algo no db
+
+ambos fazem isso por ação dos resolvers
+
+no caso das querys não é necessario colocar o query no inicio da query
+ex:
+ _ Pode ou não ter esse valor de "query"
+v
+query {
+  usuario {
+    nome id
+  }
+}
+
+ja no mutation é obrigatório começar com mutation
+
+
+tipo input -> UTILIZADO PARA ARGUMENTOS
+
+mutation {
+  novoUsuario(
+    dados:{
+    	nome: "Ronaldo",
+    	email: "ronaldo@email.com",
+    	idade: 24
+    }
+  ) {
+    id nome email perfil { nome }
+  }
+  excluirUsuario( filtro: {
+    email: "gabriel@email.com"
+  }) {
+    nome
+  }
+  alterarUsuario(
+    filtro:{
+    	email: "gabriel@email.com"
+    }
+    dados:{
+    	email: "gabriel@gmail.com"
+    }
+  ) {
+    id nome email idade perfil { nome }
+  }
+}
+
+{
+  perfis {
+    id nome
+  }
+}
+
+mutation {
+  novoPerfil(dados:{
+    nome: "Dono"
+  }) {
+    id nome
+  }
+  alterarPerfil(filtro:{ nome: "Dono da aplicação"} dados:{
+    nome: "Dono do site"
+  }) {
+    id nome
+  }
+  excluirPerfil(filtro:{
+    id: 5
+  }) {
+  	nome
+  }
+}
+
+Links Úteis
+
+https://graphql.org/learn/queries/#mutations
