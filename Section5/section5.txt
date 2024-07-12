@@ -1,0 +1,7 @@
+Links Úteis
+
+https://jwt.io/
+
+https://graphql.org/learn/execution/#root-fields-resolvers
+
+https://www.apollographql.com/docs/apollo-server/essentials/data#context
